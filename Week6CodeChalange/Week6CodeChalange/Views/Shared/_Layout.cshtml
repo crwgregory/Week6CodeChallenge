@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery import -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/Main.js"></script>
+    <meta name="description" content="The description of my page" />
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1>header text</h1>
+            <div class="row">
+                <div class="col-md-3"><img src="http://cdn-img.easylogo.cn/gif/51/51700.gif"></div>
+                <div class="col-md-5">
+                    <nav>
+                        <ul class="list-inline">
+                            <li data-url="@Url.Action("Index", "Home")" class="ajax-link">Home</li>
+                            <li data-url="@Url.Action("About", "Home")" class="ajax-link">About</li>
+                            <li data-url="@Url.Action("Work", "Home")" class="ajax-link">Work</li>
+                            <li data-url="@Url.Action("Careers", "Home")" class="ajax-link">Careers</li>
+                            <li data-url="@Url.Action("Contact", "Home")" class="ajax-link">Contact</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            @RenderBody()
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-md-3">Copyright 2014 Fake Sudio</div>
+                <div class="col-md-5">
+                    <ul class="list-inline">
+                        <li data-url="@Url.Action("Index", "Home")" class="ajax-link">Home</li> |
+                        <li data-url="@Url.Action("About", "Home")" class="ajax-link">About</li> |
+                        <li data-url="@Url.Action("Work", "Home")" class="ajax-link">Work</li> |
+                        <li data-url="@Url.Action("Careers", "Home")" class="ajax-link">Careers</li> |
+                        <li data-url="@Url.Action("Contact", "Home")" class="ajax-link">Contact</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
